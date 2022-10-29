@@ -130,3 +130,20 @@ The price will change to 8000 when single PATCH request is made.
 {
 "price": 8000
 }
+
+For Delete just send the empty JSON object in body and send the id in URL which need to be deleted.
+import axios from "axios";
+
+let headersList = {
+"Accept": "_/_",
+"User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+let reqOptions = {
+url: "http://localhost:3000/products/8/",
+method: "DELETE",
+headers: headersList,
+}
+
+let response = await axios.request(reqOptions);
+console.log(response.data);
