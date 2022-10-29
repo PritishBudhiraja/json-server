@@ -28,3 +28,8 @@ For desc: http://localhost:3000/products?\_sort=price&\_order=desc
 If we want to sort on multiple enteties.
 http://localhost:3000/products?\_sort=price,category&\_order=desc,asc
 It will sort first by price in desc order then those have same price it will sort by category in asc order
+
+If we want to make our data paginated we can use the \_page and & \_linit values
+http://localhost:3000/products?\_page=2&\_limit=2
+
+It will give the products at page 2 with 2 items as limit is 2.
