@@ -124,3 +124,9 @@ data: bodyContent,
 
 let response = await axios.request(reqOptions);
 console.log(response.data);
+
+If we need to update and send only one property then we need to use PATCH instead of PUT.
+The price will change to 8000 when single PATCH request is made.
+{
+"price": 8000
+}
