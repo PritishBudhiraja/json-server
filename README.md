@@ -19,3 +19,12 @@ It will send all the Objects which has category as electronics
 
 To filter out the nested properties we go with the dot operator.
 http://localhost:3000/products?category=electronics&discount.type=shipping
+
+Sort the data of db.json we can do via
+
+By default Ascending: http://localhost:3000/products?\_sort=price
+For desc: http://localhost:3000/products?\_sort=price&\_order=desc
+
+If we want to sort on multiple enteties.
+http://localhost:3000/products?\_sort=price,category&\_order=desc,asc
+It will sort first by price in desc order then those have same price it will sort by category in asc order
