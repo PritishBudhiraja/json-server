@@ -44,3 +44,6 @@ price_lte means applying lte property on price attribute
 http://localhost:3000/products?price_ne=4000 will give all the values whose price is not equal to 4000
 
 **like** operator: http://localhost:3000/products?category_like=^f all category that starts with f.
+
+If want to filter and search for a string then go with q=stringToSearch
+http://localhost:3000/products?q=in It will go through all elements and all lines in db.json and return the results with having substring in in it.
