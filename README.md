@@ -70,3 +70,57 @@ in Body add the JSON Body.
 "description": "This is description about product 11"
 },
 It will append the JSON in db.json
+
+import axios from "axios";
+
+let headersList = {
+"Accept": "_/_",
+"User-Agent": "Thunder Client (https://www.thunderclient.com)",
+"Content-Type": "application/json"
+}
+
+let bodyContent = JSON.stringify( {
+"id": 11,
+"title": "Product 11",
+"category": "electronics",
+"price": 4000,
+"description": "This is description about product 11"
+});
+
+let reqOptions = {
+url: "http://localhost:3000/products/",
+method: "POST",
+headers: headersList,
+data: bodyContent,
+}
+
+let response = await axios.request(reqOptions);
+console.log(response.data);
+
+In PUT request the same steps need to follow but in we need to send the entire JSON of the specific product that need to be updated.
+
+import axios from "axios";
+
+let headersList = {
+"Accept": "_/_",
+"User-Agent": "Thunder Client (https://www.thunderclient.com)",
+"Content-Type": "application/json"
+}
+
+let bodyContent = JSON.stringify( {
+"id": 11,
+"title": "Product 11",
+"category": "Champions",
+"price": 4000,
+"description": "This is description about product 11"
+});
+
+let reqOptions = {
+url: "http://localhost:3000/products/1/",
+method: "PUT",
+headers: headersList,
+data: bodyContent,
+}
+
+let response = await axios.request(reqOptions);
+console.log(response.data);

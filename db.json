@@ -2,10 +2,10 @@
   "products": [
     {
       "id": 1,
-      "title": "Product 1",
-      "category": "electronics",
+      "title": "Product 11",
+      "category": "Champions",
       "price": 4000,
-      "description": "This is description about product 1"
+      "description": "This is description about product 11"
     },
     {
       "id": 2,
