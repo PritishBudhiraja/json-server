@@ -47,3 +47,14 @@ http://localhost:3000/products?price_ne=4000 will give all the values whose pric
 
 If want to filter and search for a string then go with q=stringToSearch
 http://localhost:3000/products?q=in It will go through all elements and all lines in db.json and return the results with having substring in in it.
+
+For getting all the reviews corresponds to their products, like JOINS in SQL.
+http://localhost:3000/products?\_embed=reviews
+**\_embed** keyword is used to show all the review in a nested manner
+
+If want to to do the reverse that get the product for a particular review we use **\_expand** keyword.
+http://localhost:3000/reviews?\_expand=product
+
+For Indivsual review we can go with this: http://localhost:3000/reviews/1?\_expand=product
+
+For Indivsual Product we can go with this: http://localhost:3000/products/1?\_embed=reviews
