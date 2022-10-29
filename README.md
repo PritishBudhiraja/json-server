@@ -58,3 +58,15 @@ http://localhost:3000/reviews?\_expand=product
 For Indivsual review we can go with this: http://localhost:3000/reviews/1?\_expand=product
 
 For Indivsual Product we can go with this: http://localhost:3000/products/1?\_embed=reviews
+
+For adding data in the db.json file JSON Server supports that.
+Open thunder client add http://localhost:3000/products/
+in Body add the JSON Body.
+{
+"id": 11,
+"title": "Product 11",
+"category": "electronics",
+"price": 4000,
+"description": "This is description about product 11"
+},
+It will append the JSON in db.json
