@@ -42,3 +42,5 @@ price_lte means applying lte property on price attribute
 
 **ne** is the operator stands for not equal so
 http://localhost:3000/products?price_ne=4000 will give all the values whose price is not equal to 4000
+
+**like** operator: http://localhost:3000/products?category_like=^f all category that starts with f.
