@@ -33,3 +33,12 @@ If we want to make our data paginated we can use the \_page and & \_linit values
 http://localhost:3000/products?\_page=2&\_limit=2
 
 It will give the products at page 2 with 2 items as limit is 2.
+
+Send data with the range of values.
+http://localhost:3000/products?price_gte=2000&price_lte=6000
+
+**gte** means greater that equals to && **lte** means less than equal to.
+price_lte means applying lte property on price attribute
+
+**ne** is the operator stands for not equal so
+http://localhost:3000/products?price_ne=4000 will give all the values whose price is not equal to 4000
